@@ -1,0 +1,25 @@
+{
+  "name": "chess-wrap",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-chessboard": "^0.0.7",
+    "chess.js": "^0.9.4",
+    "angular-ui-router": "^0.2.18",
+    "socket.io-client": "^1.4.6",
+    "angular-socket-io": "^0.7.0",
+    "bootstrap": "^3.3.6",
+    "toastr": "^2.1.2",
+    "lodash": "^4.12.0"
+  }
+}

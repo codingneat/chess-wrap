@@ -1,0 +1,16 @@
+<div class="container">
+
+    <h2 > Games! Chess Wrap</h2>
+    <table class="table">
+           <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Watch</th>
+          </tr>
+          <tr ng-repeat="game in vm.games|orderBy:'created_at'">
+                <td>{{game.white}} - {{game.black}}</td>
+                <td>{{game.created_at|date:'shortDate'}}</td>
+                <td><button class="btn btn-sm btn-primary" ng-click="vm.watch(game)">Watch</button></td>
+          </tr>
+      </table>
+</div>

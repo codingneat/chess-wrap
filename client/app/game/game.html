@@ -1,0 +1,37 @@
+<div class="container" id='game'>
+    <nywton-chessboard board="boardA"  data-nywton-chessboard-autoresize data-orientation="{{vm.color}}" data-on-drag-start-cb="vm.onDragStart" data-on-snap-end="vm.onSnapEnd"  data-on-drag-start-cb="vm.onDragStart" data-on-drop="vm.onDrop" >
+    </nywton-chessboard>
+</div>
+
+        
+
+            
+<div>
+    <span  style="font-size:14px;margin-left:170px;font-weight:800">{{vm.adversary.name}} &nbsp;&nbsp;&nbsp; {{vm.counter2|myTMinuto}} : {{vm.counter2|myTSegundo}} </span>
+    <br><br>
+    <span  style="font-size:14px;margin-left:170px;font-weight:800">{{vm.myUser.name}} &nbsp;&nbsp;&nbsp; {{vm.counter|myTMinuto}} : {{vm.counter|myTSegundo}} </span>
+</div>
+<div id='text'>
+    <div id='notation'>
+       <div style="text-align:center">
+         <div ng-class="{blue: $index == vm.notation.length-1}" style="width:49%;display:inline-block;margin:5px 0" ng-repeat="not in vm.notation track by $index">
+           <a href="javascript:void(0)" class="move"  ng-click="vm.move($index+1)">
+             <span ng-if="($index)%2==0">{{($index+2)/2}}.</span>{{not}}
+           </a>
+         </div>
+         <div  style="width:49%;display:inline-block;margin:5px 0" >
+           <a>&nbsp;</a>
+         </div>
+       </div>
+    </div>
+
+    <div id='control'>
+      <button ng-click="vm.resign()" class="btn btn-default" ng-disabled="vm.color2!==vm.turn">Resign</button>     
+      <button ng-click="vm.draw()" ng-disabled="vm.color2!==vm.turn&&vm.drawt == 0" ng-class="{'btn btn-primary': vm.drawt == 1,'btn btn-default': vm.drawt == 0}">Propose Draw</button> 
+    </div>
+
+    <br>
+    <br>
+
+
+</div>

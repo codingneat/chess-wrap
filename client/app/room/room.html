@@ -1,0 +1,14 @@
+<div class="container">
+
+    <h2 > Welcome {{vm.myUser.name}}! Chess Wrap</h2>
+    <table class="table">
+           <tr>
+                <th>Name</th>
+                <th>Play</th>
+          </tr>
+          <tr ng-repeat="user in vm.users" ng-if="user.id!=vm.myUser.id">
+                <td>{{user.name}}</td>
+                <td><button class="btn btn-sm btn-primary" ng-click="vm.play(user)">Play</button></td>
+          </tr>
+      </table>
+</div>

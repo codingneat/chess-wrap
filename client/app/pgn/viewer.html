@@ -1,0 +1,33 @@
+<div class="container">
+
+         <div  id='game'>
+            <nywton-chessboard board="boardA"  data-nywton-chessboard-autoresize data-draggable="false"></nywton-chessboard>
+
+            <div><span id="white">{{vm.data.white}}</span> <span id="whiteElo">{{vm.data.whiteElo}}</span> - <span id="black">{{vm.data.black}}</span> <span id="blackElo">{{vm.data.blackElo}}</span> 
+            <br> <span id="event"></span>  <span id="site">{{vm.data.site}}</span>  <span id="round">{{vm.data.round}}</span>  <span id="date"></span>{{vm.data.date}}</div>
+
+            
+        </div>
+
+
+        <div id='text'>
+            <div id='notation'>
+               <div style="text-align:center">
+               <div ng-class="{blue: $index == vm.pos-1}" style="width:50%;display:inline-block;margin:5px 0" ng-repeat="not in vm.notation track by $index">
+                 <a href="javascript:void(0)" class="move"  ng-click="vm.move($index+1)">{{not}}</a></td>  
+               </div>
+               </div>
+            </div>
+
+            <div id='control'>
+                <button ng-click="vm.start()">Start</button>     
+                <button ng-click="vm.prev()">Prev</button> 
+                <button ng-click="vm.next()">Next</button>
+                <button ng-click="vm.end()">End</button> 
+            </div>
+
+
+
+        </div>
+
+</div>
