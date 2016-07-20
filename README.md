@@ -16,3 +16,9 @@ Then run bower to install front dependencies.
 ```sh
 $ bower install
 ```
+
+The client server is not emplemented. The API server can be initialized with
+
+```sh
+$ node api/index.js
+```
