@@ -148,6 +148,7 @@
                 socketFactory.emit('specialMove', {user:vm.myUser,adversary: vm.adversary, move:'toDraw'}, function(data){
                   dataService.user.setUser(vm.myUser);
                   dataService.flag.setFlag(1);
+                  gameEnd('h');
                   $state.go('room'); 
                });
               }
